@@ -1,0 +1,10 @@
+.DS_Store
+Thumbs.db
+*.log
+
+# Full-resolution source images — kept locally as backups, not needed on the live site
+*-original.*
+
+# Private project notes — stay in the Obsidian vault, never publish
+CLAUDE.md
+assets/README.md
