@@ -8,3 +8,15 @@ Thumbs.db
 # Private project notes — stay in the Obsidian vault, never publish
 CLAUDE.md
 assets/README.md
+
+# --- Added 2026-10-21 — this folder is also opened as its own Obsidian vault ---
+# Obsidian + Claudian config and session data — never publish
+.obsidian/
+.claudian/
+# Raw certificate originals and vault spillover. Only reviewed, compressed
+# copies in assets/achievements/ ship to the live site.
+02 - Projects/
+96 - Reviews/
+*.docx
+# Claude-generated planning notes
+(C)*
