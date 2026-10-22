@@ -27,40 +27,25 @@
   color-scheme: light;
 }
 
-/* ---------- Dark theme ---------- */
+/* ---------- Dark theme (dark navy) ---------- */
 html[data-theme="dark"] {
-  --color-bg: #0b1422;
-  --color-surface: #132238;
-  --color-surface-alt: #0f1b2d;
-  --color-text: #dde4ee;
-  --color-muted: #9fadc0;
-  --color-navy: #c7d5e8;
-  --color-navy-dark: #f2f5f9;
+  --color-bg: #0f2b4c;
+  --color-surface: #173a63;
+  --color-surface-alt: #123257;
+  --color-text: #e6edf6;
+  --color-muted: #a9bbd1;
+  --color-navy: #cfdcee;
+  --color-navy-dark: #ffffff;
   --color-accent: #c9964a;
-  --color-accent-dark: #d9a85c;
-  --color-border: #22364f;
-  --color-header: rgba(11, 20, 34, 0.92);
+  --color-accent-dark: #e0b36a;
+  --color-border: #2a4e7a;
+  --color-header: rgba(13, 37, 66, 0.94);
   color-scheme: dark;
 }
 
-/* Dark mode inverts the navy hero: it becomes a light band with navy text */
+/* Hero stays navy, one shade deeper than the page so it still reads as a band */
 html[data-theme="dark"] .hero {
-  background: linear-gradient(180deg, #f3f6fa 0%, #dfe7f1 100%);
-  color: var(--brand-navy-dark);
-}
-html[data-theme="dark"] .hero h1,
-html[data-theme="dark"] .achievements-hero h1 { color: var(--brand-navy-dark); }
-html[data-theme="dark"] .hero .eyebrow { color: #8a5f1a; }
-html[data-theme="dark"] .hero-lede { color: #2b3d55; }
-html[data-theme="dark"] .hero-location { color: #4d5d73; }
-html[data-theme="dark"] .hero-photo { box-shadow: 0 14px 36px rgba(15, 43, 76, 0.25); }
-html[data-theme="dark"] .btn-secondary {
-  border-color: #6f86a3;
-  color: var(--brand-navy);
-}
-html[data-theme="dark"] .btn-secondary:hover {
-  border-color: #8a5f1a;
-  color: #8a5f1a;
+  background: linear-gradient(180deg, #081a30 0%, #0b2340 100%);
 }
 
 html[data-theme="dark"] .lang-toggle:hover,
