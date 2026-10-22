@@ -14,11 +14,48 @@
   --color-accent: #b8873c;
   --color-accent-dark: #96691f;
   --color-border: #e1e5eb;
+  --color-header: rgba(255, 255, 255, 0.92);
+
+  /* Brand constants — identical in light and dark (hero, gold buttons) */
+  --brand-navy: #0f2b4c;
+  --brand-navy-dark: #0a1c33;
 
   --font-en: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-ar: 'Tajawal', -apple-system, 'Segoe UI', sans-serif;
 
   --max-width: 1080px;
+  color-scheme: light;
+}
+
+/* ---------- Dark theme ---------- */
+html[data-theme="dark"] {
+  --color-bg: #0b1422;
+  --color-surface: #132238;
+  --color-surface-alt: #0f1b2d;
+  --color-text: #dde4ee;
+  --color-muted: #9fadc0;
+  --color-navy: #c7d5e8;
+  --color-navy-dark: #f2f5f9;
+  --color-accent: #c9964a;
+  --color-accent-dark: #d9a85c;
+  --color-border: #22364f;
+  --color-header: rgba(11, 20, 34, 0.92);
+  color-scheme: dark;
+}
+
+html[data-theme="dark"] .hero {
+  background: linear-gradient(180deg, #060e1a 0%, #0c1f38 100%);
+}
+
+html[data-theme="dark"] .lang-toggle:hover,
+html[data-theme="dark"] .theme-toggle:hover {
+  background: var(--color-navy);
+  color: var(--brand-navy-dark);
+}
+
+html[data-theme="dark"] .ach-card,
+html[data-theme="dark"] .stat-card {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
 }
 
 /* ---------- Bilingual toggle ---------- */
@@ -70,7 +107,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(255, 255, 255, 0.92);
+  background: var(--color-header);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--color-border);
 }
@@ -135,20 +172,45 @@ ul { list-style: none; margin: 0; padding: 0; }
   padding: 7px 16px;
   border-radius: 999px;
   background: var(--color-accent);
-  color: var(--color-navy-dark);
+  color: var(--brand-navy-dark);
   white-space: nowrap;
 }
 
 .cv-link:hover {
   background: #cf9a49;
-  color: var(--color-navy-dark);
+  color: var(--brand-navy-dark);
 }
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid var(--color-navy);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-navy);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--color-navy);
+  color: #fff;
+}
+
+.theme-toggle svg { width: 18px; height: 18px; }
+.theme-toggle .icon-sun { display: none; }
+html[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 
 .contact-section .contact-cv { margin: 24px 0; }
 
 /* ---------- Hero ---------- */
 .hero {
-  background: linear-gradient(180deg, var(--color-navy-dark) 0%, var(--color-navy) 100%);
+  background: linear-gradient(180deg, var(--brand-navy-dark) 0%, var(--brand-navy) 100%);
   color: #f2f4f8;
   padding: 88px 0 72px;
 }
@@ -224,12 +286,12 @@ ul { list-style: none; margin: 0; padding: 0; }
 
 .btn-primary {
   background: var(--color-accent);
-  color: var(--color-navy-dark);
+  color: var(--brand-navy-dark);
 }
 
 .btn-primary:hover {
   background: #cf9a49;
-  color: var(--color-navy-dark);
+  color: var(--brand-navy-dark);
   transform: translateY(-1px);
 }
 
