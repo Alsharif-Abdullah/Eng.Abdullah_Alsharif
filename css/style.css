@@ -43,8 +43,24 @@ html[data-theme="dark"] {
   color-scheme: dark;
 }
 
+/* Dark mode inverts the navy hero: it becomes a light band with navy text */
 html[data-theme="dark"] .hero {
-  background: linear-gradient(180deg, #060e1a 0%, #0c1f38 100%);
+  background: linear-gradient(180deg, #f3f6fa 0%, #dfe7f1 100%);
+  color: var(--brand-navy-dark);
+}
+html[data-theme="dark"] .hero h1,
+html[data-theme="dark"] .achievements-hero h1 { color: var(--brand-navy-dark); }
+html[data-theme="dark"] .hero .eyebrow { color: #8a5f1a; }
+html[data-theme="dark"] .hero-lede { color: #2b3d55; }
+html[data-theme="dark"] .hero-location { color: #4d5d73; }
+html[data-theme="dark"] .hero-photo { box-shadow: 0 14px 36px rgba(15, 43, 76, 0.25); }
+html[data-theme="dark"] .btn-secondary {
+  border-color: #6f86a3;
+  color: var(--brand-navy);
+}
+html[data-theme="dark"] .btn-secondary:hover {
+  border-color: #8a5f1a;
+  color: #8a5f1a;
 }
 
 html[data-theme="dark"] .lang-toggle:hover,
